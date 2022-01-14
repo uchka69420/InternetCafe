@@ -37,9 +37,10 @@ namespace InternetCafe
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(206, 143);
+            this.button1.Location = new System.Drawing.Point(137, 93);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(427, 141);
+            this.button1.Size = new System.Drawing.Size(285, 92);
             this.button1.TabIndex = 0;
             this.button1.Text = "tamjid";
             this.button1.UseVisualStyleBackColor = true;
@@ -48,19 +49,21 @@ namespace InternetCafe
             // 
             this.pictureBox1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.ErrorImage")));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(687, 56);
+            this.pictureBox1.Location = new System.Drawing.Point(458, 36);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(233, 355);
+            this.pictureBox1.Size = new System.Drawing.Size(168, 302);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(932, 537);
+            this.ClientSize = new System.Drawing.Size(621, 349);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form2";
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
