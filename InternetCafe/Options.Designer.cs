@@ -84,6 +84,7 @@ namespace InternetCafe
             this.button1.TabIndex = 2;
             this.button1.Text = "Нэмэх";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -122,7 +123,7 @@ namespace InternetCafe
             this.dataGridView1.DataSource = this.pCBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(143, 35);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(259, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(247, 150);
             this.dataGridView1.TabIndex = 6;
             // 
             // internetCafeDataSet

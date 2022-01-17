@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace InternetCafe
 {
@@ -23,6 +24,11 @@ namespace InternetCafe
             this.usersTableAdapter.Fill(this.internetCafeDataSet1.Users);
             // TODO: This line of code loads data into the 'internetCafeDataSet.PC' table. You can move, or remove it, as needed.
             this.pCTableAdapter.Fill(this.internetCafeDataSet.PC);
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
 
         }
     }

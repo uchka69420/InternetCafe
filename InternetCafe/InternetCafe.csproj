@@ -126,16 +126,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Tw%40_Internet_Cafe_%282008%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\100px-Tome_of_knowledge_hi_res.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\266323381_436336721265054_4318405658084075166_n.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Black_open_book.png" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
