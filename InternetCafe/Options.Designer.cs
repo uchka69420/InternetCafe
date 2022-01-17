@@ -94,6 +94,7 @@ namespace InternetCafe
             this.button2.TabIndex = 3;
             this.button2.Text = "Хасах";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -125,6 +126,7 @@ namespace InternetCafe
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(247, 150);
             this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseClick);
             // 
             // internetCafeDataSet
             // 

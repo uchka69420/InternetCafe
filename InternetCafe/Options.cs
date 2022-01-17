@@ -13,7 +13,12 @@ namespace InternetCafe
 {
     public partial class Options : Form
     {
-        public Options()
+        
+            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=Library Database;Persist Security Info=True;User ID=sa;Password=101010");
+            SqlCommand cmd;
+            SqlDataAdapter adapt;
+            int id = 0;
+            public Options()
         {
             InitializeComponent();
         }
@@ -29,7 +34,35 @@ namespace InternetCafe
 
         private void button1_Click(object sender, EventArgs e)
         {
+            cmd = new SqlCommand("insert into PC values(status)", con);
+            con.Open();
+            cmd.Parameters.AddWithValue("@status", 1);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("Record Inserted Successfully");
+        }
 
+        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int id = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            string status = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (id != 0)
+            {
+                cmd = new SqlCommand("delete PC where ID=@id", con);
+                con.Open();
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show("Record Deleted Successfully!");
+            }
+            else
+            {
+                MessageBox.Show("Please Select Record to Delete");
+            }
         }
     }
 }
