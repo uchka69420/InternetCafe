@@ -20,7 +20,8 @@ namespace InternetCafe
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            Options form2 = new Options();
+            form2.Show();
         }
     }
 }
