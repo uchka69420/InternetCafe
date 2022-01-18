@@ -46,5 +46,12 @@ namespace InternetCafe
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form2 frm2 = new Form2();
+            frm2.ShowDialog();
+        }
     }
 }
