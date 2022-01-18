@@ -59,15 +59,5 @@ namespace InternetCafe.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap WIN_20220114_13_56_37_Pro {
-            get {
-                object obj = ResourceManager.GetObject("WIN_20220114_13_56_37_Pro", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }
