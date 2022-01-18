@@ -32,6 +32,9 @@ namespace InternetCafe
 
         private void Optionlbl_Click(object sender, EventArgs e)
         {
+            Options Obj = new Options();
+            Obj.Show();
+            this.Hide();
         }
 
         private void Deletebtn_Click(object sender, EventArgs e)
@@ -55,7 +58,7 @@ namespace InternetCafe
 
         private void Memberslbl_Click(object sender, EventArgs e)
         {
-            Members Obj = new Members();
+            UserProfile Obj = new UserProfile();
             Obj.Show();
             this.Hide();
         }

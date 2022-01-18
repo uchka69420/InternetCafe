@@ -13,7 +13,7 @@ namespace InternetCafe
 {
     public partial class Options : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=InternetCafe;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=172.16.17.13;Initial Catalog=InternetCafe;Persist Security Info=True;User ID=sa;Password=101010");
         public Options()
         {
             InitializeComponent();
