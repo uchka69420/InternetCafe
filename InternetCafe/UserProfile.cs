@@ -16,5 +16,12 @@ namespace InternetCafe
         {
             InitializeComponent();
         }
+
+        private void UserProfile_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'internetCafeDataSet6.Users' table. You can move, or remove it, as needed.
+            this.usersTableAdapter.Fill(this.internetCafeDataSet6.Users);
+
+        }
     }
 }
