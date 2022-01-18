@@ -44,6 +44,7 @@ namespace InternetCafe
             this.internetCafeDataSet6 = new InternetCafe.InternetCafeDataSet6();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersTableAdapter = new InternetCafe.InternetCafeDataSet6TableAdapters.UsersTableAdapter();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.internetCafeDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
@@ -151,11 +152,20 @@ namespace InternetCafe
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
             // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(12, 23);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(120, 95);
+            this.listBox1.TabIndex = 11;
+            // 
             // UserProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(558, 306);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox4);
@@ -194,5 +204,6 @@ namespace InternetCafe
         private InternetCafeDataSet6 internetCafeDataSet6;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private InternetCafeDataSet6TableAdapters.UsersTableAdapter usersTableAdapter;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
