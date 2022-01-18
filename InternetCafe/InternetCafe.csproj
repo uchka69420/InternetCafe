@@ -91,11 +91,27 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>InternetCafeDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="InternetCafeDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InternetCafeDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InternetCafeDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InternetCafeDataSet5.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Members.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Members.Designer.cs">
       <DependentUpon>Members.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Options.Designer.cs">
+      <DependentUpon>Options.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -104,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Options.resx">
+      <DependentUpon>Options.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -153,6 +172,28 @@
     </None>
     <None Include="InternetCafeDataSet3.xss">
       <DependentUpon>InternetCafeDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="InternetCafeDataSet4.xsc">
+      <DependentUpon>InternetCafeDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="InternetCafeDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InternetCafeDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InternetCafeDataSet4.xss">
+      <DependentUpon>InternetCafeDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="InternetCafeDataSet5.xsc">
+      <DependentUpon>InternetCafeDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="InternetCafeDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InternetCafeDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InternetCafeDataSet5.xss">
+      <DependentUpon>InternetCafeDataSet5.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
