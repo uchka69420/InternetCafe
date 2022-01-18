@@ -32,9 +32,6 @@ namespace InternetCafe
 
         private void Optionlbl_Click(object sender, EventArgs e)
         {
-            Option Obj = new Option();
-            Obj.Show();
-            this.Hide();
         }
 
         private void Deletebtn_Click(object sender, EventArgs e)
