@@ -32,7 +32,7 @@ namespace InternetCafe
 
         private void Optionlbl_Click(object sender, EventArgs e)
         {
-            Options Obj = new Options();
+            Option Obj = new Option();
             Obj.Show();
             this.Hide();
         }
