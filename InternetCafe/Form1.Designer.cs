@@ -41,7 +41,7 @@ namespace InternetCafe
             // 
             this.textBox1.Location = new System.Drawing.Point(210, 82);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(116, 20);
+            this.textBox1.Size = new System.Drawing.Size(171, 20);
             this.textBox1.TabIndex = 0;
             // 
             // textBox2
