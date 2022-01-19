@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace InternetCafe
 {
     public partial class UserProfile : Form
     {
-        SqlConnection conn = new SqlConnection();
+        SqlConnection con = new SqlConnection(@"Data Source=172.16.17.13;Initial Catalog=InternetCafe;Persist Security Info=True;User ID=sa;Password=101010");
         SqlCommand cmd = new SqlCommand();
         SqlDataAdapter da = new SqlDataAdapter();
         DataTable dt = new DataTable();
@@ -31,10 +32,9 @@ namespace InternetCafe
             {
                 try
                 {
-                    string select = listBox1.SelectedIndex.ToString();
-                    query = "SELECT * FROM Users where username = '"+select+"'";
+                    query = "SELECT username FROM Users";
                     cmd = new SqlCommand();
-                    cmd.Connection = conn;
+                    cmd.Connection = con;
                     cmd.CommandText = query;
                     da = new SqlDataAdapter();
                     da.SelectCommand = cmd;
@@ -56,6 +56,25 @@ namespace InternetCafe
                 }
 
             }
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            con.Open();
+            string username = listBox1.SelectedItem.ToString();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Users WHERE username = '" + username + "'");
+            cmd.Connection = con;
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                textBox1.Text = dr["username"].ToString();
+                textBox2.Text = dr["password"].ToString();
+            }
+            con.Close();
+
         }
     }
 }
