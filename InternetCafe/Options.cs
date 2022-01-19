@@ -20,11 +20,8 @@ namespace InternetCafe
         }
         private void Options_Load_1(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'internetCafeDataSet5.Users' table. You can move, or remove it, as needed.
             this.usersTableAdapter.Fill(this.internetCafeDataSet5.Users);
-            // TODO: This line of code loads data into the 'internetCafeDataSet4.PC' table. You can move, or remove it, as needed.
-            this.pCTableAdapter.Fill(this.internetCafeDataSet4.PC);
-
+            this.pcTableAdapter.Fill(this.internetCafeDataSet4.PC);
         }
 
         private void button1_Click_1(object sender, EventArgs e)

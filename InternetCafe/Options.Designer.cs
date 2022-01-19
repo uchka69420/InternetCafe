@@ -37,7 +37,7 @@ namespace InternetCafe
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.internetCafeDataSet4 = new InternetCafe.InternetCafeDataSet4();
             this.pCBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pCTableAdapter = new InternetCafe.InternetCafeDataSet4TableAdapters.PCTableAdapter();
+            this.pcTableAdapter = new InternetCafe.InternetCafeDataSet4TableAdapters.PCTableAdapter();
             this.pcidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -120,7 +120,7 @@ namespace InternetCafe
             // 
             // pCTableAdapter
             // 
-            this.pCTableAdapter.ClearBeforeFill = true;
+            this.pcTableAdapter.ClearBeforeFill = true;
             // 
             // pcidDataGridViewTextBoxColumn
             // 
@@ -234,7 +234,7 @@ namespace InternetCafe
         private System.Windows.Forms.DataGridView dataGridView1;
         private InternetCafeDataSet4 internetCafeDataSet4;
         private System.Windows.Forms.BindingSource pCBindingSource;
-        private InternetCafeDataSet4TableAdapters.PCTableAdapter pCTableAdapter;
+        private InternetCafeDataSet4TableAdapters.PCTableAdapter pcTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn pcidDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView2;
