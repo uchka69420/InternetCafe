@@ -9,15 +9,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Timers;
+using System.Configuration;
 
 namespace InternetCafe
 {
     public partial class ClientWindow : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=172.16.17.13;Initial Catalog=InternetCafe;Persist Security Info=True;User ID=sa;Password=101010");
         public ClientWindow()
         {
             InitializeComponent();
+            string constr = ConfigurationManager.ConnectionStrings["InternetCafe"].ConnectionString;
+            SqlConnection con = new SqlConnection(constr);
         }
 
         private void profileToolStripMenuItem_Click(object sender, EventArgs e)
@@ -42,8 +44,7 @@ namespace InternetCafe
 
         private void ClientWindow_Load(object sender, EventArgs e)
         {
-            int balance = 
-            System.Timers.Timer timer = new System.Timers.Timer();
+
         }
     }
 }
