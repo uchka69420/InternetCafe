@@ -7,14 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace InternetCafe
 {
     public partial class Form2 : Form
     {
+        SqlConnection con = new SqlConnection(@"Data Source=172.16.17.13;Initial Catalog=InternetCafe;Persist Security Info=True;User ID=sa;Password=101010");
         public Form2()
         {
             InitializeComponent();
+        }
+        private void Reset()
+        {
+            textBox1.Text = "";
+            dateTimePicker1.Text = "";
+            comboBox1.Text = "";
+
         }
 
         private void Logoutlbl_Click(object sender, EventArgs e)
@@ -36,10 +45,24 @@ namespace InternetCafe
             Obj.Show();
             this.Hide();
         }
+        int key = 0;
 
         private void Deletebtn_Click(object sender, EventArgs e)
-        {
-
+        {          
+            if (key == 0)
+            {
+                MessageBox.Show("Алдаа гарлаа!");
+            }
+            else
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("delete from Orders where order_id=@Orid", con);
+                cmd.Parameters.AddWithValue("@Orid", key);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Амжилттай устгагдлаа!");
+                con.Close();
+                Reset();
+            }
         }
 
         private void Cafeterialbl_Click(object sender, EventArgs e)
@@ -66,6 +89,33 @@ namespace InternetCafe
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Addbtn_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "" || dateTimePicker1.Text == "")
+            {
+                MessageBox.Show("Алдаа гарлаа!");
+            }
+            else
+            {
+                try
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("insert into Orders(number,order_date,pc_id,end_date,bill) values(@N,@Od,@Pi,@Ed,@Bill)", con);
+                    cmd.Parameters.AddWithValue("@N", textBox1.Text);
+                    cmd.Parameters.AddWithValue("@Od", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                    cmd.Parameters.AddWithValue("@Pi", comboBox1.Text);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Амжилттай бүртгэгдлээ!");
+                    con.Close();
+                    Reset();
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
+            }
         }
     }
 }

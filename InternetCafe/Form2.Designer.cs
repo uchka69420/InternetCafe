@@ -35,13 +35,8 @@ namespace InternetCafe
             this.Addbtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.numberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.orderdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pcidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ordersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.internetCafeDataSet3 = new InternetCafe.InternetCafeDataSet3();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Orderlbl = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -67,11 +62,18 @@ namespace InternetCafe
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.orderidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pcidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.order_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.enddateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.billDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.internetCafeDataSet3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.internetCafeDataSet1)).BeginInit();
@@ -107,19 +109,20 @@ namespace InternetCafe
             this.Addbtn.TabIndex = 0;
             this.Addbtn.Text = "Нэмэх ";
             this.Addbtn.UseVisualStyleBackColor = true;
+            this.Addbtn.Click += new System.EventHandler(this.Addbtn_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.numericUpDown1);
-            this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.Addbtn);
             this.panel1.Controls.Add(this.Deletebtn);
             this.panel1.Location = new System.Drawing.Point(0, 94);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(384, 644);
+            this.panel1.Size = new System.Drawing.Size(1133, 644);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -129,37 +132,20 @@ namespace InternetCafe
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.orderidDataGridViewTextBoxColumn,
             this.numberDataGridViewTextBoxColumn,
-            this.orderdateDataGridViewTextBoxColumn,
-            this.pcidDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.ordersBindingSource1;
+            this.pcidDataGridViewTextBoxColumn,
+            this.order_date,
+            this.enddateDataGridViewTextBoxColumn,
+            this.billDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.ordersBindingSource;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridView1.Location = new System.Drawing.Point(0, 202);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(381, 479);
+            this.dataGridView1.Size = new System.Drawing.Size(1133, 442);
             this.dataGridView1.TabIndex = 4;
-            // 
-            // numberDataGridViewTextBoxColumn
-            // 
-            this.numberDataGridViewTextBoxColumn.DataPropertyName = "number";
-            this.numberDataGridViewTextBoxColumn.HeaderText = "number";
-            this.numberDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.numberDataGridViewTextBoxColumn.Name = "numberDataGridViewTextBoxColumn";
-            // 
-            // orderdateDataGridViewTextBoxColumn
-            // 
-            this.orderdateDataGridViewTextBoxColumn.DataPropertyName = "order_date";
-            this.orderdateDataGridViewTextBoxColumn.HeaderText = "order_date";
-            this.orderdateDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.orderdateDataGridViewTextBoxColumn.Name = "orderdateDataGridViewTextBoxColumn";
-            // 
-            // pcidDataGridViewTextBoxColumn
-            // 
-            this.pcidDataGridViewTextBoxColumn.DataPropertyName = "pc_id";
-            this.pcidDataGridViewTextBoxColumn.HeaderText = "pc_id";
-            this.pcidDataGridViewTextBoxColumn.MinimumWidth = 8;
-            this.pcidDataGridViewTextBoxColumn.Name = "pcidDataGridViewTextBoxColumn";
             // 
             // ordersBindingSource1
             // 
@@ -170,22 +156,6 @@ namespace InternetCafe
             // 
             this.internetCafeDataSet3.DataSetName = "InternetCafeDataSet3";
             this.internetCafeDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(12, 115);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(315, 26);
-            this.numericUpDown1.TabIndex = 2;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(12, 64);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(315, 34);
-            this.textBox2.TabIndex = 1;
             // 
             // textBox1
             // 
@@ -407,6 +377,75 @@ namespace InternetCafe
             this.pictureBox10.TabIndex = 4;
             this.pictureBox10.TabStop = false;
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(12, 74);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(315, 26);
+            this.dateTimePicker1.TabIndex = 5;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.comboBox1.Location = new System.Drawing.Point(206, 118);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 28);
+            this.comboBox1.TabIndex = 6;
+            // 
+            // orderidDataGridViewTextBoxColumn
+            // 
+            this.orderidDataGridViewTextBoxColumn.DataPropertyName = "order_id";
+            this.orderidDataGridViewTextBoxColumn.HeaderText = "order_id";
+            this.orderidDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.orderidDataGridViewTextBoxColumn.Name = "orderidDataGridViewTextBoxColumn";
+            this.orderidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // numberDataGridViewTextBoxColumn
+            // 
+            this.numberDataGridViewTextBoxColumn.DataPropertyName = "number";
+            this.numberDataGridViewTextBoxColumn.HeaderText = "number";
+            this.numberDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.numberDataGridViewTextBoxColumn.Name = "numberDataGridViewTextBoxColumn";
+            // 
+            // pcidDataGridViewTextBoxColumn
+            // 
+            this.pcidDataGridViewTextBoxColumn.DataPropertyName = "pc_id";
+            this.pcidDataGridViewTextBoxColumn.HeaderText = "pc_id";
+            this.pcidDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.pcidDataGridViewTextBoxColumn.Name = "pcidDataGridViewTextBoxColumn";
+            // 
+            // order_date
+            // 
+            this.order_date.DataPropertyName = "order_date";
+            this.order_date.HeaderText = "order_date";
+            this.order_date.MinimumWidth = 8;
+            this.order_date.Name = "order_date";
+            // 
+            // enddateDataGridViewTextBoxColumn
+            // 
+            this.enddateDataGridViewTextBoxColumn.DataPropertyName = "end_date";
+            this.enddateDataGridViewTextBoxColumn.HeaderText = "end_date";
+            this.enddateDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.enddateDataGridViewTextBoxColumn.Name = "enddateDataGridViewTextBoxColumn";
+            // 
+            // billDataGridViewTextBoxColumn
+            // 
+            this.billDataGridViewTextBoxColumn.DataPropertyName = "bill";
+            this.billDataGridViewTextBoxColumn.HeaderText = "bill";
+            this.billDataGridViewTextBoxColumn.MinimumWidth = 8;
+            this.billDataGridViewTextBoxColumn.Name = "billDataGridViewTextBoxColumn";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -433,7 +472,6 @@ namespace InternetCafe
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordersBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.internetCafeDataSet3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -461,8 +499,6 @@ namespace InternetCafe
         private System.Windows.Forms.Button Addbtn;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label Orderlbl;
         private System.Windows.Forms.Panel panel2;
@@ -478,9 +514,6 @@ namespace InternetCafe
         private InternetCafeDataSet2 internetCafeDataSet2;
         private System.Windows.Forms.BindingSource ordersBindingSource;
         private InternetCafeDataSet2TableAdapters.OrdersTableAdapter ordersTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numberDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn orderdateDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pcidDataGridViewTextBoxColumn;
         private InternetCafeDataSet3 internetCafeDataSet3;
         private System.Windows.Forms.BindingSource ordersBindingSource1;
         private InternetCafeDataSet3TableAdapters.OrdersTableAdapter ordersTableAdapter1;
@@ -493,5 +526,13 @@ namespace InternetCafe
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn orderidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pcidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn order_date;
+        private System.Windows.Forms.DataGridViewTextBoxColumn enddateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn billDataGridViewTextBoxColumn;
     }
 }

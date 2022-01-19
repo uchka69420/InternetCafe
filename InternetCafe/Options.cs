@@ -20,7 +20,6 @@ namespace InternetCafe
         }
         private void Options_Load_1(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'internetCafeDataSet5.Users' table. You can move, or remove it, as needed.
             this.usersTableAdapter.Fill(this.internetCafeDataSet5.Users);
             // TODO: This line of code loads data into the 'internetCafeDataSet4.PC' table. You can move, or remove it, as needed.
             this.pCTableAdapter.Fill(this.internetCafeDataSet4.PC);
@@ -32,18 +31,43 @@ namespace InternetCafe
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("INSERT INTO PC(status)values('" + 1 + "'");
+                SqlCommand cmd = new SqlCommand("INSERT INTO PC(status)values('" + 1 + "')");
+                cmd.Connection = con;
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Амжилттай");
+                con.Close();
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
         }
+        public void dataselect()
+        {
+            SqlDataAdapter adap = new SqlDataAdapter("SELECT * from Users", con);
+            DataTable dt = new DataTable();
+            adap.Fill(dt);
+            dataGridView1.Rows.Clear();
+            foreach(DataRow dr in dt.Rows)
+            {
+                int n = dataGridView1.Rows.Add();
+                dataGridView1.Rows[n].Cells[1].Value = dr[1].ToString();
+                dataGridView1.Rows[n].Cells[2].Value = dr[2].ToString();
+                dataGridView1.Rows[n].Cells[3].Value = dr[3].ToString();
+            }
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            string name = textBox1.Text;
+            string password = textBox2.Text;
+            int balance = Int32.Parse(textBox3.Text);
+            con.Open();
+            SqlCommand cmd = new SqlCommand("INSERT INTO Users(username, password, balance) VALUES ('" + name + "','" + password + "','" + balance + "')");
+            cmd.Connection = con;
+            cmd.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("Амжилттай хадгаллаа", "OK", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
