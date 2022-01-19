@@ -29,8 +29,15 @@ namespace InternetCafe
             adap.Fill(dt);
             if (dt.Rows.Count == 1)
             {
-                Form2 form2 = new Form2();
-                form2.Show();
+                //if (textBox1.Text == "admin")
+                //{
+                    Form2 form2 = new Form2();
+                    form2.Show();
+                //}
+                //else
+                //{
+
+                //}
             }
             else
             {
