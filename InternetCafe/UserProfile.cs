@@ -60,11 +60,20 @@ namespace InternetCafe
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string select = listBox1.SelectedItem.ToString();
-            if (select == "mike")
+            con.Open();
+            string username = listBox1.SelectedItem.ToString();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Users WHERE username = '" + username + "'");
+            cmd.Connection = con;
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
             {
-                MessageBox.Show("yes");
+                textBox1.Text = dr["username"].ToString();
+                textBox2.Text = dr["password"].ToString();
             }
+            con.Close();
 
         }
     }
