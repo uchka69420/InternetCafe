@@ -33,9 +33,11 @@ namespace InternetCafe
             try
             {
                 con.Open();
-                SqlCommand cmd = new SqlCommand("INSERT INTO PC(status)values('" + 1 + "'");
+                SqlCommand cmd = new SqlCommand("INSERT INTO PC(status)values('" + 1 + "')");
+                cmd.Connection = con;
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Амжилттай");
+                con.Close();
             }
             catch(Exception ex)
             {
