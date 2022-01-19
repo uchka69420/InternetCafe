@@ -44,7 +44,7 @@ namespace InternetCafe
 
         private void Cafeterialbl_Click(object sender, EventArgs e)
         {
-            Cafeteria Obj = new Cafeteria();
+            CfrmMain Obj = new CfrmMain();
             Obj.Show();
             this.Hide();
         }
