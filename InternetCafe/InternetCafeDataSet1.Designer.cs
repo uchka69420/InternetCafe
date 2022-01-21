@@ -10,6 +10,8 @@
 
 #pragma warning disable 1591
 
+using System;
+
 namespace InternetCafe {
     
     
@@ -1116,6 +1118,10 @@ SELECT user_id, username, password, balance FROM Users WHERE (user_id = @user_id
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(string username, string password, global::System.Nullable<int> balance, int Original_user_id, string Original_username, string Original_password, global::System.Nullable<int> Original_balance) {
             return this.Update(username, password, balance, Original_user_id, Original_username, Original_password, Original_balance, Original_user_id);
+        }
+
+        internal void Fill(object users)
+        {
         }
     }
     

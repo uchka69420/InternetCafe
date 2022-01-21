@@ -35,10 +35,7 @@ namespace InternetCafe
         private void Form2_Load(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(constr);
-            // TODO: This line of code loads data into the 'internetCafeDataSet3.Orders' table. You can move, or remove it, as needed.
-            this.ordersTableAdapter1.Fill(this.internetCafeDataSet3.Orders);
-            // TODO: This line of code loads data into the 'internetCafeDataSet2.Orders' table. You can move, or remove it, as needed.
-            this.ordersTableAdapter.Fill(this.internetCafeDataSet2.Orders);
+            this.ordersTableAdapter.Fill(this.ordersBindingSource);
         }
 
         private void Optionlbl_Click(object sender, EventArgs e)
