@@ -89,6 +89,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>InternetCafeDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="InternetCafeDataSet2.cs">
+      <DependentUpon>InternetCafeDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="InternetCafeDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

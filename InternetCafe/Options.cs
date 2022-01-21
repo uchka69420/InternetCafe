@@ -14,7 +14,7 @@ namespace InternetCafe
 {
     public partial class Options : Form
     {
-        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["InternetCafe"].ConnectionString);
+        string constr = ConfigurationManager.ConnectionStrings["InternetCafe"].ConnectionString;
         public Options()
         {
             InitializeComponent();
@@ -30,6 +30,7 @@ namespace InternetCafe
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            SqlConnection con = new SqlConnection(constr);
             try
             {
                 con.Open();
@@ -46,6 +47,7 @@ namespace InternetCafe
         }
         public void dataselect()
         {
+            SqlConnection con = new SqlConnection(constr);
             SqlDataAdapter adap = new SqlDataAdapter("SELECT * from Users", con);
             DataTable dt = new DataTable();
             adap.Fill(dt);
@@ -61,6 +63,7 @@ namespace InternetCafe
 
         private void button2_Click(object sender, EventArgs e)
         {
+            SqlConnection con = new SqlConnection(constr);
             string name = textBox1.Text;
             string password = textBox2.Text;
             int balance = Int32.Parse(textBox3.Text);
