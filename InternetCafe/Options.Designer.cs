@@ -35,19 +35,13 @@ namespace InternetCafe
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.internetCafeDataSet4 = new InternetCafe.InternetCafeDataSet4();
             this.pCBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.internetCafeDataSet4 = new InternetCafe.InternetCafeDataSet4();
             this.pcTableAdapter = new InternetCafe.InternetCafeDataSet4TableAdapters.PCTableAdapter();
-            this.pcidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.internetCafeDataSet5 = new InternetCafe.InternetCafeDataSet5();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.internetCafeDataSet5 = new InternetCafe.InternetCafeDataSet5();
             this.usersTableAdapter = new InternetCafe.InternetCafeDataSet5TableAdapters.UsersTableAdapter();
-            this.useridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.balanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -55,12 +49,18 @@ namespace InternetCafe
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.pcidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.useridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.balanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.internetCafeDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pCBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.internetCafeDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.internetCafeDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.internetCafeDataSet5)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -114,32 +114,19 @@ namespace InternetCafe
             this.dataGridView1.Size = new System.Drawing.Size(248, 104);
             this.dataGridView1.TabIndex = 4;
             // 
-            // internetCafeDataSet4
-            // 
-            this.internetCafeDataSet4.DataSetName = "InternetCafeDataSet4";
-            this.internetCafeDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // pCBindingSource
             // 
             this.pCBindingSource.DataMember = "PC";
             this.pCBindingSource.DataSource = this.internetCafeDataSet4;
             // 
-            // pCTableAdapter
+            // internetCafeDataSet4
+            // 
+            this.internetCafeDataSet4.DataSetName = "InternetCafeDataSet4";
+            this.internetCafeDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pcTableAdapter
             // 
             this.pcTableAdapter.ClearBeforeFill = true;
-            // 
-            // pcidDataGridViewTextBoxColumn
-            // 
-            this.pcidDataGridViewTextBoxColumn.DataPropertyName = "pc_id";
-            this.pcidDataGridViewTextBoxColumn.HeaderText = "pc_id";
-            this.pcidDataGridViewTextBoxColumn.Name = "pcidDataGridViewTextBoxColumn";
-            this.pcidDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "status";
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
             // 
             // dataGridView2
             // 
@@ -156,44 +143,19 @@ namespace InternetCafe
             this.dataGridView2.Size = new System.Drawing.Size(448, 150);
             this.dataGridView2.TabIndex = 5;
             // 
-            // internetCafeDataSet5
-            // 
-            this.internetCafeDataSet5.DataSetName = "InternetCafeDataSet5";
-            this.internetCafeDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // usersBindingSource
             // 
             this.usersBindingSource.DataMember = "Users";
             this.usersBindingSource.DataSource = this.internetCafeDataSet5;
             // 
+            // internetCafeDataSet5
+            // 
+            this.internetCafeDataSet5.DataSetName = "InternetCafeDataSet5";
+            this.internetCafeDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // usersTableAdapter
             // 
             this.usersTableAdapter.ClearBeforeFill = true;
-            // 
-            // useridDataGridViewTextBoxColumn
-            // 
-            this.useridDataGridViewTextBoxColumn.DataPropertyName = "user_id";
-            this.useridDataGridViewTextBoxColumn.HeaderText = "user_id";
-            this.useridDataGridViewTextBoxColumn.Name = "useridDataGridViewTextBoxColumn";
-            this.useridDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // usernameDataGridViewTextBoxColumn
-            // 
-            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
-            this.usernameDataGridViewTextBoxColumn.HeaderText = "username";
-            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "password";
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            // 
-            // balanceDataGridViewTextBoxColumn
-            // 
-            this.balanceDataGridViewTextBoxColumn.DataPropertyName = "balance";
-            this.balanceDataGridViewTextBoxColumn.HeaderText = "balance";
-            this.balanceDataGridViewTextBoxColumn.Name = "balanceDataGridViewTextBoxColumn";
             // 
             // button3
             // 
@@ -253,6 +215,44 @@ namespace InternetCafe
             this.label5.TabIndex = 12;
             this.label5.Text = "Balance:";
             // 
+            // pcidDataGridViewTextBoxColumn
+            // 
+            this.pcidDataGridViewTextBoxColumn.DataPropertyName = "pc_id";
+            this.pcidDataGridViewTextBoxColumn.HeaderText = "PC Дугаар";
+            this.pcidDataGridViewTextBoxColumn.Name = "pcidDataGridViewTextBoxColumn";
+            this.pcidDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "Статус";
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            // 
+            // useridDataGridViewTextBoxColumn
+            // 
+            this.useridDataGridViewTextBoxColumn.DataPropertyName = "user_id";
+            this.useridDataGridViewTextBoxColumn.HeaderText = "Хэрэглэгчийн ID";
+            this.useridDataGridViewTextBoxColumn.Name = "useridDataGridViewTextBoxColumn";
+            this.useridDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // usernameDataGridViewTextBoxColumn
+            // 
+            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
+            this.usernameDataGridViewTextBoxColumn.HeaderText = "Хэрэглэгчийн нэр";
+            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "Нууц үг";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            // 
+            // balanceDataGridViewTextBoxColumn
+            // 
+            this.balanceDataGridViewTextBoxColumn.DataPropertyName = "balance";
+            this.balanceDataGridViewTextBoxColumn.HeaderText = "Баланс";
+            this.balanceDataGridViewTextBoxColumn.Name = "balanceDataGridViewTextBoxColumn";
+            // 
             // Options
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -275,11 +275,11 @@ namespace InternetCafe
             this.Text = "Options";
             this.Load += new System.EventHandler(this.Options_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.internetCafeDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pCBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.internetCafeDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.internetCafeDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.internetCafeDataSet5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,16 +295,10 @@ namespace InternetCafe
         private InternetCafeDataSet4 internetCafeDataSet4;
         private System.Windows.Forms.BindingSource pCBindingSource;
         private InternetCafeDataSet4TableAdapters.PCTableAdapter pcTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pcidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView dataGridView2;
         private InternetCafeDataSet5 internetCafeDataSet5;
         private System.Windows.Forms.BindingSource usersBindingSource;
         private InternetCafeDataSet5TableAdapters.UsersTableAdapter usersTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn useridDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn balanceDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
@@ -312,5 +306,11 @@ namespace InternetCafe
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pcidDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn useridDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn balanceDataGridViewTextBoxColumn;
     }
 }
