@@ -10,6 +10,8 @@
 
 #pragma warning disable 1591
 
+using System;
+
 namespace InternetCafe {
     
     
@@ -1269,6 +1271,10 @@ SELECT order_id, number, order_date, end_date, bill, pc_id FROM Orders WHERE (or
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(global::System.Nullable<int> number, global::System.Nullable<global::System.DateTime> order_date, global::System.Nullable<global::System.DateTime> end_date, global::System.Nullable<int> bill, global::System.Nullable<int> pc_id, int Original_order_id, global::System.Nullable<int> Original_number, global::System.Nullable<global::System.DateTime> Original_order_date, global::System.Nullable<global::System.DateTime> Original_end_date, global::System.Nullable<int> Original_bill, global::System.Nullable<int> Original_pc_id) {
             return this.Update(number, order_date, end_date, bill, pc_id, Original_order_id, Original_number, Original_order_date, Original_end_date, Original_bill, Original_pc_id, Original_order_id);
+        }
+
+        internal void Fill(object orders)
+        {
         }
     }
     

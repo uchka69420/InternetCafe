@@ -42,12 +42,9 @@ namespace InternetCafe
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.internetCafeDataSet6 = new InternetCafe.InternetCafeDataSet6();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usersTableAdapter = new InternetCafe.InternetCafeDataSet6TableAdapters.UsersTableAdapter();
             this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.internetCafeDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -143,17 +140,13 @@ namespace InternetCafe
             // 
             // internetCafeDataSet6
             // 
-            this.internetCafeDataSet6.DataSetName = "InternetCafeDataSet6";
-            this.internetCafeDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // usersBindingSource
             // 
             this.usersBindingSource.DataMember = "Users";
-            this.usersBindingSource.DataSource = this.internetCafeDataSet6;
             // 
             // usersTableAdapter
             // 
-            this.usersTableAdapter.ClearBeforeFill = true;
             // 
             // listBox1
             // 
@@ -185,7 +178,6 @@ namespace InternetCafe
             this.Text = "UserProfile";
             this.Load += new System.EventHandler(this.UserProfile_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.internetCafeDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -205,9 +197,7 @@ namespace InternetCafe
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private InternetCafeDataSet6 internetCafeDataSet6;
         private System.Windows.Forms.BindingSource usersBindingSource;
-        private InternetCafeDataSet6TableAdapters.UsersTableAdapter usersTableAdapter;
         private System.Windows.Forms.ListBox listBox1;
     }
 }

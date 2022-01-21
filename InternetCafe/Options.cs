@@ -21,9 +21,10 @@ namespace InternetCafe
         }
         private void Options_Load_1(object sender, EventArgs e)
         {
-            this.usersTableAdapter.Fill(this.internetCafeDataSet5.Users);
-            // TODO: This line of code loads data into the 'internetCafeDataSet4.PC' table. You can move, or remove it, as needed.
-            this.pcTableAdapter.Fill(this.internetCafeDataSet4.PC);
+            // TODO: This line of code loads data into the 'internetCafeDataSet1.Users' table. You can move, or remove it, as needed.
+            this.usersTableAdapter.Fill(this.usersBindingSource1);
+            // TODO: This line of code loads data into the 'internetCafeDataSet.PC' table. You can move, or remove it, as needed.
+            this.pCTableAdapter.Fill(this.pCBindingSource);
 
         }
 
@@ -77,6 +78,11 @@ namespace InternetCafe
             this.Close();
             Form2 frm2 = new Form2();
             frm2.ShowDialog();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
