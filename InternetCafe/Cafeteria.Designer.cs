@@ -30,24 +30,24 @@ namespace InternetCafe
         private void InitializeComponent()
         {
             this.pnlSide = new System.Windows.Forms.Panel();
-            this.btnFoods = new System.Windows.Forms.Button();
-            this.btnDrinks = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.btnDrinks = new System.Windows.Forms.Button();
+            this.btnFoods = new System.Windows.Forms.Button();
             this.pnlTop = new System.Windows.Forms.Panel();
             this.pnlFoods = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlDrinks = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btmCola = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnSprite = new System.Windows.Forms.Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btmCola = new System.Windows.Forms.Button();
             this.pnlSide.SuspendLayout();
             this.pnlFoods.SuspendLayout();
             this.pnlDrinks.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlSide
@@ -65,15 +65,33 @@ namespace InternetCafe
             this.pnlSide.TabIndex = 0;
             this.pnlSide.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSide_Paint);
             // 
-            // btnFoods
+            // label3
             // 
-            this.btnFoods.Location = new System.Drawing.Point(0, 129);
-            this.btnFoods.Name = "btnFoods";
-            this.btnFoods.Size = new System.Drawing.Size(200, 40);
-            this.btnFoods.TabIndex = 0;
-            this.btnFoods.Text = "Foods";
-            this.btnFoods.UseVisualStyleBackColor = true;
-            this.btnFoods.Click += new System.EventHandler(this.btnFoods_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Mon Motter", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(29, 31);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(140, 49);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Cafe";
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(0, 300);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(200, 40);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "button4";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(0, 241);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(200, 40);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // btnDrinks
             // 
@@ -85,23 +103,15 @@ namespace InternetCafe
             this.btnDrinks.UseVisualStyleBackColor = true;
             this.btnDrinks.Click += new System.EventHandler(this.btnDrinks_Click);
             // 
-            // button3
+            // btnFoods
             // 
-            this.button3.Location = new System.Drawing.Point(0, 241);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(200, 40);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(0, 300);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(200, 40);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnFoods.Location = new System.Drawing.Point(0, 129);
+            this.btnFoods.Name = "btnFoods";
+            this.btnFoods.Size = new System.Drawing.Size(200, 40);
+            this.btnFoods.TabIndex = 0;
+            this.btnFoods.Text = "Foods";
+            this.btnFoods.UseVisualStyleBackColor = true;
+            this.btnFoods.Click += new System.EventHandler(this.btnFoods_Click);
             // 
             // pnlTop
             // 
@@ -119,6 +129,14 @@ namespace InternetCafe
             this.pnlFoods.Size = new System.Drawing.Size(601, 425);
             this.pnlFoods.TabIndex = 2;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(24, 107);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(538, 211);
+            this.flowLayoutPanel1.TabIndex = 2;
+            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            // 
             // pnlDrinks
             // 
             this.pnlDrinks.Controls.Add(this.panel4);
@@ -127,23 +145,6 @@ namespace InternetCafe
             this.pnlDrinks.Name = "pnlDrinks";
             this.pnlDrinks.Size = new System.Drawing.Size(601, 425);
             this.pnlDrinks.TabIndex = 2;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btmCola);
-            this.panel1.Location = new System.Drawing.Point(36, 71);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 114);
-            this.panel1.TabIndex = 2;
-            // 
-            // btmCola
-            // 
-            this.btmCola.Location = new System.Drawing.Point(33, 22);
-            this.btmCola.Name = "btmCola";
-            this.btmCola.Size = new System.Drawing.Size(137, 69);
-            this.btmCola.TabIndex = 0;
-            this.btmCola.Text = "Cola";
-            this.btmCola.UseVisualStyleBackColor = true;
             // 
             // panel4
             // 
@@ -162,23 +163,22 @@ namespace InternetCafe
             this.btnSprite.Text = "Sprite";
             this.btnSprite.UseVisualStyleBackColor = true;
             // 
-            // flowLayoutPanel1
+            // panel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(24, 107);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(538, 211);
-            this.flowLayoutPanel1.TabIndex = 2;
-            this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            this.panel1.Controls.Add(this.btmCola);
+            this.panel1.Location = new System.Drawing.Point(36, 71);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 114);
+            this.panel1.TabIndex = 2;
             // 
-            // label3
+            // btmCola
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Mon Motter", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(29, 31);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 49);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Cafe";
+            this.btmCola.Location = new System.Drawing.Point(33, 22);
+            this.btmCola.Name = "btmCola";
+            this.btmCola.Size = new System.Drawing.Size(137, 69);
+            this.btmCola.TabIndex = 0;
+            this.btmCola.Text = "Cola";
+            this.btmCola.UseVisualStyleBackColor = true;
             // 
             // CfrmMain
             // 
@@ -196,8 +196,8 @@ namespace InternetCafe
             this.pnlSide.PerformLayout();
             this.pnlFoods.ResumeLayout(false);
             this.pnlDrinks.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
