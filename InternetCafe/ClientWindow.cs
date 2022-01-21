@@ -15,7 +15,7 @@ namespace InternetCafe
 {
     public partial class ClientWindow : Form
     {
-        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["InternetCafe"].ConnectionString);
+        string constr = ConfigurationManager.ConnectionStrings["InternetCafe"].ConnectionString;
         public ClientWindow()
         {
             InitializeComponent();
