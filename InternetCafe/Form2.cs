@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace InternetCafe
 {
     public partial class Form2 : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=172.16.17.13;Initial Catalog=InternetCafe;Persist Security Info=True;User ID=sa;Password=101010");
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["InternetCafe"].ConnectionString);
         public Form2()
         {
             InitializeComponent();

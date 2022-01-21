@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace InternetCafe
 {
@@ -20,9 +21,9 @@ namespace InternetCafe
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            string constr = "Data Source=172.16.17.13;Initial Catalog=InternetCafe;User ID=sa;Password=101010";
-            string que = "SELECT * FROM Users WHERE username = '" + textBox1.Text + "' and password = '" + textBox2.Text + "' ";
+            string constr = ConfigurationManager.ConnectionStrings["InternetCafe"].ConnectionString;
             SqlConnection con = new SqlConnection(constr);
+            string que = "SELECT * FROM Users WHERE username = '" + textBox1.Text + "' and password = '" + textBox2.Text + "' ";
             con.Open();
             SqlDataAdapter adap = new SqlDataAdapter(que, con);
             DataTable dt = new DataTable();

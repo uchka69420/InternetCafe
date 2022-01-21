@@ -14,7 +14,7 @@ namespace InternetCafe
 {
     public partial class UserProfile : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=172.16.17.13;Initial Catalog=InternetCafe;Persist Security Info=True;User ID=sa;Password=101010");
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["InternetCafe"].ConnectionString);
         SqlCommand cmd = new SqlCommand();
         SqlDataAdapter da = new SqlDataAdapter();
         DataTable dt = new DataTable();

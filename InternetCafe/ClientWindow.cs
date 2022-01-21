@@ -15,11 +15,10 @@ namespace InternetCafe
 {
     public partial class ClientWindow : Form
     {
+        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["InternetCafe"].ConnectionString);
         public ClientWindow()
         {
             InitializeComponent();
-            string constr = ConfigurationManager.ConnectionStrings["InternetCafe"].ConnectionString;
-            SqlConnection con = new SqlConnection(constr);
         }
 
         private void profileToolStripMenuItem_Click(object sender, EventArgs e)
@@ -38,8 +37,8 @@ namespace InternetCafe
 
         private void захиалгаӨгөхToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Cafeteria cafe = new Cafeteria();
-            cafe.Show();
+            //Cafeteria cafe = new Cafeteria();
+            //cafe.Show();
         }
 
         private void ClientWindow_Load(object sender, EventArgs e)
