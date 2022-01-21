@@ -10,6 +10,9 @@
 
 #pragma warning disable 1591
 
+using System;
+using System.Windows.Forms;
+
 namespace InternetCafe {
     
     
@@ -961,6 +964,10 @@ namespace InternetCafe.InternetCafeDataSetTableAdapters {
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(global::System.Nullable<int> status, int Original_pc_id, global::System.Nullable<int> Original_status) {
             return this.Update(status, Original_pc_id, Original_status, Original_pc_id);
+        }
+
+        internal void Fill(BindingSource pCBindingSource)
+        {
         }
     }
     

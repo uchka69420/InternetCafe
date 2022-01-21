@@ -14,21 +14,23 @@ namespace InternetCafe
 {
     public partial class Options : Form
     {
-        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["InternetCafe"].ConnectionString);
+        string constr = ConfigurationManager.ConnectionStrings["InternetCafe"].ConnectionString;
         public Options()
         {
             InitializeComponent();
         }
         private void Options_Load_1(object sender, EventArgs e)
         {
-            this.usersTableAdapter.Fill(this.internetCafeDataSet5.Users);
-            // TODO: This line of code loads data into the 'internetCafeDataSet4.PC' table. You can move, or remove it, as needed.
-            this.pcTableAdapter.Fill(this.internetCafeDataSet4.PC);
+            // TODO: This line of code loads data into the 'internetCafeDataSet1.Users' table. You can move, or remove it, as needed.
+            this.usersTableAdapter.Fill(this.usersBindingSource1);
+            // TODO: This line of code loads data into the 'internetCafeDataSet.PC' table. You can move, or remove it, as needed.
+            this.pCTableAdapter.Fill(this.pCBindingSource);
 
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            SqlConnection con = new SqlConnection(constr);
             try
             {
                 con.Open();
@@ -45,6 +47,7 @@ namespace InternetCafe
         }
         public void dataselect()
         {
+            SqlConnection con = new SqlConnection(constr);
             SqlDataAdapter adap = new SqlDataAdapter("SELECT * from Users", con);
             DataTable dt = new DataTable();
             adap.Fill(dt);
@@ -60,6 +63,7 @@ namespace InternetCafe
 
         private void button2_Click(object sender, EventArgs e)
         {
+            SqlConnection con = new SqlConnection(constr);
             string name = textBox1.Text;
             string password = textBox2.Text;
             int balance = Int32.Parse(textBox3.Text);
@@ -77,6 +81,11 @@ namespace InternetCafe
             this.Close();
             Form2 frm2 = new Form2();
             frm2.ShowDialog();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
