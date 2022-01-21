@@ -49,6 +49,7 @@ namespace InternetCafe
             this.Hide();
         }
         int key = 0;
+        private string connectionString;
 
         private void Deletebtn_Click(object sender, EventArgs e)
         {          
@@ -119,6 +120,11 @@ namespace InternetCafe
                     MessageBox.Show(Ex.Message);
                 }
             }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
