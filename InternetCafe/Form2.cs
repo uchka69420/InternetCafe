@@ -34,6 +34,8 @@ namespace InternetCafe
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            string constr = ConfigurationManager.ConnectionStrings["InternetCafe"].ConnectionString;
+            SqlConnection con = new SqlConnection(constr);
             // TODO: This line of code loads data into the 'internetCafeDataSet3.Orders' table. You can move, or remove it, as needed.
             this.ordersTableAdapter1.Fill(this.internetCafeDataSet3.Orders);
             // TODO: This line of code loads data into the 'internetCafeDataSet2.Orders' table. You can move, or remove it, as needed.
