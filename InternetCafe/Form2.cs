@@ -14,7 +14,7 @@ namespace InternetCafe
 {
     public partial class Form2 : Form
     {
-        SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["InternetCafe"].ConnectionString);
+        string constr = ConfigurationManager.ConnectionStrings["InternetCafe"].ConnectionString;
         public Form2()
         {
             InitializeComponent();
@@ -34,7 +34,6 @@ namespace InternetCafe
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            string constr = ConfigurationManager.ConnectionStrings["InternetCafe"].ConnectionString;
             SqlConnection con = new SqlConnection(constr);
             // TODO: This line of code loads data into the 'internetCafeDataSet3.Orders' table. You can move, or remove it, as needed.
             this.ordersTableAdapter1.Fill(this.internetCafeDataSet3.Orders);
@@ -51,7 +50,8 @@ namespace InternetCafe
         int key = 0;
 
         private void Deletebtn_Click(object sender, EventArgs e)
-        {          
+        {
+            SqlConnection con = new SqlConnection(constr);
             if (key == 0)
             {
                 MessageBox.Show("Алдаа гарлаа!");
@@ -96,6 +96,7 @@ namespace InternetCafe
 
         private void Addbtn_Click(object sender, EventArgs e)
         {
+            SqlConnection con = new SqlConnection(constr);
             if (textBox1.Text == "" || dateTimePicker1.Text == "")
             {
                 MessageBox.Show("Алдаа гарлаа!");
